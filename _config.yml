@@ -1,0 +1,26 @@
+# Permalinks
+# permalink:        pretty
+# relative_permalinks: true
+markdown: redcarpet
+highlighter: pygments
+
+# Setup
+title:  Rajiv R Nair
+tagline:  A spoonful of technology
+url:  http://rajivrnair.github.io
+# paginate:         1
+# baseurl:          /
+author:
+  name: Rajiv R. Nair
+  url:  https://www.linkedin.com/in/rajivrnair
+  avatar: http://www.gravatar.com/avatar/64573dd183639c50c673546c9bebac95.png
+
+# Custom vars
+# version:          1.0.0
+# github:
+  # repo:           https://github.com/rajivrnair
+
+pages_list:
+  About: '/about.html'
+  # Archive: '/archive'
+  # Feed: '/atom.xml'

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+  {% include body_header.html %}
+
+    <div class="container">
+      <section id="main_content">
+        <article class="post">
+          <h1 class="post-title">{{ page.title }}</h1>
+          <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time>
+          {{ content }}
+        </article>
+      </section>
+      <section id="side_bar">
+        {% include posts.html %}
+      </section>
+    </div>
+
+    {% include body_footer.html %}
+
+  </body>
+</html>
+

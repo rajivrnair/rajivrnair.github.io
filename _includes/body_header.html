@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <a href="/" title="Home"><h1>{{ site.title }}</h1></a>
+    <h2>{{ site.tagline }}</h2>
+
+    <section id="downloads">
+      <a href="https://github.com/rajivrnair" class="btn btn-github">
+        <span class="icon"></span>My GitHub
+      </a>
+    </section>
+
+    <h3 id="page-list">
+      {% for page in site.pages_list %}
+        &nbsp;&nbsp;&nbsp;<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+      {% endfor %}
+    </h3>
+  </div>
+</header>
