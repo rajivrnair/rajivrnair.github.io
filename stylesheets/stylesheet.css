@@ -299,6 +299,13 @@ a {
   zoom:1;
 }
 
+#pretty-date {
+  position: relative;
+  width: 70px;
+  color: #999;
+  margin: 0 auto;
+}
+
 /*
 Footer
 */
