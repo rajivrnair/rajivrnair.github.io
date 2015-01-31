@@ -10,8 +10,11 @@
     <div class="content_container">
       <section id="main_content">
         <article class="post">
-          <h1 class="post-title">{{ page.title }}</h1>
-          <time datetime="{{ page.date | date_to_xmlschema }}" id="pretty-date">{{ page.date | date_to_string }}</time>
+          <h1 class="post-title">
+            {{ page.title }}
+            <a href="{{ post_url post.name }}" title="Permalink" class="permalink">&#9875;</a>
+          </h1>
+          <time datetime="{{ page.date | date_to_xmlschema }}" class="pretty-date">{{ page.date | date_to_string }}</time>
           {{ content }}
         </article>
       </section>

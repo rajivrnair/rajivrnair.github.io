@@ -5,7 +5,7 @@ title: Home
 
 <h1>Latest Post</h1>
 {% for post in site.posts limit:1 %}
-  <time datetime="{{ post.date | date_to_xmlschema }}" id="pretty-date">{{ post.date | date_to_string }}</time><br/>
+  <time datetime="{{ post.date | date_to_xmlschema }}" class="pretty-date">{{ post.date | date_to_string }}</time><br/>
   {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
   <a href="{{ post.url }}" class="anchor"><small>...Read on.</small></a>
 {% endfor %}
@@ -13,6 +13,6 @@ title: Home
 <br/><br/>
 <h2>Recent Posts</h2>
 {% for post in site.posts offset:1 limit:2 %}
-  <time datetime="{{ post.date | date_to_xmlschema }}" id="pretty-date">{{ post.date | date_to_string }}</time>
+  <time datetime="{{ post.date | date_to_xmlschema }}" class="pretty-date">{{ post.date | date_to_string }}</time>
   <a href="{{ post.url }}" class="anchor"><small>&raquo; {{ post.title }}</small></a><br/>
 {% endfor %}
