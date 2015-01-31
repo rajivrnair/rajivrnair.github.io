@@ -13,5 +13,6 @@ TODO:
 - blog more!!
 - share on
   - linked in
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share"></script>
   - G+
 
