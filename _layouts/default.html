@@ -7,13 +7,13 @@
 
   {% include body_header.html %}
 
-    <div class="container">
+    <div class="content_container">
       <section id="main_content">
         {{ content }}
       </section>
-      <section id="side_bar">
+      <div id="side_bar">
         {% include posts.html %}
-      </section>
+      </div>
     </div>
 
     {% include body_footer.html %}

@@ -1,7 +1,3 @@
-<ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}" class="anchor">{{ post.date | date_to_string }} &raquo; {{ post.title }}</a>
-    </li>
+      <a href="{{ post.url }}" class="anchor"><small>&raquo; {{ post.title }}</small></a><br/>
   {% endfor %}
-</ul>
