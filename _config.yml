@@ -21,6 +21,7 @@ author:
   # repo:           https://github.com/rajivrnair
 
 pages_list:
+  Archives: '/archives.html'
   About: '/about.html'
   # Archive: '/archive'
   # Feed: '/atom.xml'
