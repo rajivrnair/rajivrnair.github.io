@@ -1,0 +1,70 @@
+---
+layout: post
+title: Hibernate Custom UUID generator
+description: Use a custom uuid generator in Hibernate.
+comments: true
+---
+
+Many web applications these days use UUIDs as primary keys in their database. While this approach has its pros and cons (see [Primary Keys vs GUIDs](http://blog.codinghorror.com/primary-keys-ids-versus-guids/)), one of the principal advantages is that you can generate these ids outside of the database.
+
+###Contrived Example
+_*System Alpha*_ sends messages to _*System Beta*_ which results in an entity being created in system _*Gamma*_. _*Alpha*_ later needs to query _*System Gamma*_ for that entity.
+
+- One (horribly-inefficient) way to do this would be for _*Alpha*_ to wait for _*Beta*_ which waits for _*Gamma*_ to come back with an ID that is then passed up. You probably wouldn't print this code and stick it on the refrigerator :-)
+- A better way to do this would be for _*Alpha*_ to generate a UUID and pass that along to _*Beta*_ which uses that UUID in its interaction with _*Gamma*_. _*Gamma*_ would create that entity with the given UUID and _*Alpha*_ could query _*Gamma*_ at leisure.
+
+###So What?
+Well, assume you have the following in _*Gamma*_ to create an entity (Gist [here](https://gist.github.com/rajivrnair/2f660011d821002ecc4c)):
+{% highlight java %}
+@Id
+@Column(name = "entity_id")
+@GeneratedValue(generator = "system-uuid")
+@GenericGenerator(name = "system-uuid", strategy = "uuid2")
+private String entityId;
+{% endhighlight %}
+
+This will generate a UUID for an entity when it is created. The fly in the ointment is getting hibernate to use the uuid passed in, whenever there is one or fall back to the default behaviour of generating one if the UUID not passed in. You can do this by creating a custom id generator in Hibernate like so:
+{% highlight java %}
+/**
+ * Based on http://stackoverflow.com/a/5392349/566434
+ */
+public class InquisitiveUUIDGenerator extends UUIDGenerator {
+
+    private String entityName;
+
+    @Override
+    public void configure(Type type, Properties params, Dialect dialect) {
+        entityName = params.getProperty(ENTITY_NAME);
+        super.configure(type, params, dialect);
+    }
+
+    @Override
+    public Serializable generate(SessionImplementor session, Object object) {
+        Serializable id = session
+                .getEntityPersister(entityName, object)
+                .getIdentifier(object, session);
+
+        if (id == null) {
+            return super.generate(session, object);
+        } else {
+            return id;
+        }
+    }
+}
+{% endhighlight %}
+
+As you can see, this uses the UUID passed in or generates one if the id is absent. The original entity class too needs to change like so:
+{% highlight java %}
+@Id
+@Column(name = "entity_id")
+@GeneratedValue(generator = "inquisitive-uuid")
+@GenericGenerator(name = "inquisitive-uuid", strategy = "com.myapp.persistence.generators.InquisitiveUUIDGenerator")
+private String entityId;
+{% endhighlight %}
+
+###References
+These people have written a lot of sensible stuff about UUIDs and Hibernate identifiers.
+
+- [Hibernate and UUID Identifiers](http://vladmihalcea.com/2014/07/01/hibernate-and-uuid-identifiers/)
+- [Identity Vs. Uniqueidentifier (Newbie question)](https://groups.google.com/forum/?hl=en#!msg/microsoft.public.sqlserver.programming/qtCRhLLM9Kk/tg9vDfjbYW0J)
+- [Primary Keys: IDs vs GUIDs](http://blog.codinghorror.com/primary-keys-ids-versus-guids/)
