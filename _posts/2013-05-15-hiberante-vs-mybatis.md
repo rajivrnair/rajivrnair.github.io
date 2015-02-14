@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hibernate vs MyBatis
+description: Comparison of MyBatis versus Hibernate
 comments: true
 ---
 

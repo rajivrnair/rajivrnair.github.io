@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sorting a map by values
+description: How to sort a map in Java by its values instead of by its keys.
 comments: true
 ---
 
