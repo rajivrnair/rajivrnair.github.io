@@ -5,8 +5,10 @@ markdown: redcarpet
 highlighter: pygments
 
 # Setup
-title:  Rajiv R Nair
-tagline:  A Spoonful of Technology
+title: Blog of Rajiv R Nair
+tagline: A Spoonful of Technology
+name: A Spoonful of Technology
+description: My personal technology pensieve
 url:  http://rajivrnair.github.io
 # paginate:         1
 # baseurl:          /
@@ -24,4 +26,4 @@ pages_list:
   Archives: '/archives.html'
   About: '/about.html'
   # Archive: '/archive'
-  # Feed: '/atom.xml'
+  # Feed: '/feed.xml'
