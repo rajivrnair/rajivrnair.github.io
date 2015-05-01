@@ -92,6 +92,10 @@ a {
   text-decoration: none;
 }
 
+a img {
+  padding-right: 2px;
+}
+
 /*
 Navigation
 */

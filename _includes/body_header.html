@@ -14,6 +14,11 @@
       {% for page in site.pages_list %}
         <small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
       {% endfor %}
+      <small>
+        <a class="rss" href="/feed.xml">
+          <img src="../images/rss.png" height="12" width="11"/>RSS
+        </a>
+      </small>
     </h3>
   </div>
 </header>
