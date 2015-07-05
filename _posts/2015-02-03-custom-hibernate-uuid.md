@@ -7,13 +7,13 @@ tags: [java, hibernate]
 Many web applications these days use UUIDs as primary keys in their database. While this approach has its pros and cons (see [Primary Keys vs GUIDs](http://blog.codinghorror.com/primary-keys-ids-versus-guids/)), one of the principal advantages is that you can generate these ids outside of the database.
 
 ###Contrived Example
-_*System Alpha*_ sends messages to _*System Beta*_ which results in an entity being created in _*System Gamma*_. _*Alpha*_ later needs to query _*Gamma*_ for that entity.
+*System Alpha* sends messages to *System Beta* which results in an entity being created in *System Gamma*. *Alpha* later needs to query *Gamma* for that entity.
 
-- One (horribly-inefficient) way to do this would be for _*Alpha*_ to wait for _*Beta*_ which waits for _*Gamma*_ to come back with an ID that is then passed up. You probably wouldn't print this code and stick it on the refrigerator :-)
-- A better way to do this would be for _*Alpha*_ to generate a UUID and pass that along to _*Beta*_ which uses that UUID in its interaction with _*Gamma*_. _*Gamma*_ would create that entity with the given UUID and _*Alpha*_ could query _*Gamma*_ at leisure.
+- One (horribly-inefficient) way to do this would be for *Alpha* to wait for *Beta* which waits for *Gamma* to come back with an ID that is then passed up. You probably wouldn't print this code and stick it on the refrigerator :-)
+- A better way to do this would be for *Alpha* to generate a UUID and pass that along to *Beta* which uses that UUID in its interaction with *Gamma*. *Gamma* would create that entity with the given UUID and *Alpha* could query *Gamma* at leisure.
 
 ###So What?
-Well, assume you have the following in _*Gamma*_ to create an entity (Gist [here](https://gist.github.com/rajivrnair/2f660011d821002ecc4c)):
+Well, assume you have the following in *Gamma* to create an entity (Gist [here](https://gist.github.com/rajivrnair/2f660011d821002ecc4c)):
 {% highlight java %}
 @Id
 @Column(name = "entity_id")
