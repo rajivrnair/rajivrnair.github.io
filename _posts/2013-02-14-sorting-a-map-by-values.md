@@ -1,10 +1,9 @@
 ---
-layout: post
 title: Sorting a map by values
-description: How to sort a map in Java by its values instead of by its keys.
-comments: true
+tags: [java, hibernate]
 ---
 
+###How to sort a map in Java by its values instead of by its keys.
 Most applications of Maps do not require ordering. Occasionally, we stumble upon instances where maps need sorting. To maintain insertion order in Maps, use a [LinkedHashMap](http://docs.oracle.com/javase/6/docs/api/java/util/LinkedHashMap.html). To sort on the keys, use a [SortedMap](http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html).
 
 However, once every thousand years or so, the planets align and we need to sort a map by its values. For these situations, some people prefer to create a List of Map entries (List<Map.Entry<K,V>> and then sort using Collections.sort() with a custom Comparator. That works if you don’t need the output as a map. Yes, you can put all the list entries into a map, but let’s assume that the fundamental reason you’re here is that you’re too lazy to write all that code every time you have to sort a map.

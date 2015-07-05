@@ -1,29 +1,46 @@
-# Permalinks
-# permalink:        pretty
-# relative_permalinks: true
-markdown: redcarpet
-highlighter: pygments
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "rajivrnair.github.io" # the base hostname & protocol for your site.
+title: "Blog of Rajiv R Nair"
 
-# Setup
-title: Blog of Rajiv R Nair
-tagline: A Spoonful of Technology
-name: A Spoonful of Technology
-description: My personal technology pensieve
-url:  http://rajivrnair.github.io
-# paginate:         1
-# baseurl:          /
-author:
-  name: Rajiv R. Nair
-  url:  https://www.linkedin.com/in/rajivrnair
-  avatar: http://www.gravatar.com/avatar/64573dd183639c50c673546c9bebac95.png
 
-# Custom vars
-# version:          1.0.0
-# github:
-  # repo:           https://github.com/rajivrnair
+paginate: 3 #articles per page
+paginate_path: /blog/page:num #makes pagination working
 
-pages_list:
-  Archives: '/archives.html'
-  About: '/about.html'
-  # Archive: '/archive'
-  # Feed: '/feed.xml'
+
+#contacts
+git: "https://github.com/rajivrnair"  #Add your github url here.
+stackoverflow: "http://stackoverflow.com/users/566434/rajiv" #Add your stackoverflow url here.
+twitter: "https://twitter.com/gundsawada"  #Add your twitter url here.
+
+#disqus comment
+disqus:
+    shortname: "rajivnair" #replace with your disqus comment short name
+
+#google analytics
+# google:
+#     tracking-id: "" #paste your tracking id here
+gems:
+  - jekyll-sitemap
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

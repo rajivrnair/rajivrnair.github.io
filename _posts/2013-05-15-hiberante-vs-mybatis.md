@@ -1,10 +1,9 @@
 ---
-layout: post
 title: Hibernate vs MyBatis
-description: Comparison of MyBatis versus Hibernate
-comments: true
+tags: [java, ORM, hibernate, myBatis]
 ---
 
+###Comparison of MyBatis versus Hibernate
 I’ve often heard people arguing about whether Hibernate is better or MyBatis. The truth is, “there is no spoon.” It is not about whether Hibernate is better or MyBatis, but which of these tools best fits your situation. Without further ado, here is a comparison.
 
 _*Disclaimer: This is my personal (and humble) opinion. Some databases were irremediably harmed in the forming of these views.*_

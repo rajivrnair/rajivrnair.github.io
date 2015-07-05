@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Lambdas vs Closures
-comments: true
+tags: [functional programming]
 ---
+
+###Differences or Similarities between Lambdas and Closures
 A ***Lambda Expression*** is merely an anonymous function - a language construct. Giving a lambda a name makes it a named function.
 
 A ***Closure*** on the other hand is a technique to implement first-class functions. They are functions that *'close over the environment in which they are defined'* which just means that they have access to variables present in the context where they were created, not necessarily just those in their parameter list.
@@ -52,7 +53,7 @@ Now the *can\_run\_faster\_than\_10\_kph?.call(milkha_singh)* checks if Milkha S
 **To put it simply, a closure is a lambda paired with the environment in which it was created, which then closes over the lambda.**
 
 ###Excellent Reads:
-[Martin Fowler on Lambdas](http://martinfowler.com/bliki/Lambda.html)  
-[StackOverflow](http://stackoverflow.com/questions/220658/what-is-the-difference-between-a-closure-and-a-lambda)  
-[The Java Lambda FAQ](http://www.lambdafaq.org/)  
-[Closures in Ruby](https://innig.net/software/ruby/closures-in-ruby)  
+[Martin Fowler on Lambdas](http://martinfowler.com/bliki/Lambda.html)
+[StackOverflow](http://stackoverflow.com/questions/220658/what-is-the-difference-between-a-closure-and-a-lambda)
+[The Java Lambda FAQ](http://www.lambdafaq.org/)
+[Closures in Ruby](https://innig.net/software/ruby/closures-in-ruby)

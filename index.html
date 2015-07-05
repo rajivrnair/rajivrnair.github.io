@@ -1,23 +1,9 @@
 ---
-layout: default
-title: Home
-description: Technology blog of Rajiv Radhakrishnan Nair. Hosted on github.
+layout: welcome
+
 ---
 
-<h1>Latest Post</h1>
-{% for post in site.posts limit:1 %}
-  <h3>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="pretty-date">{{ post.date | date_to_string }}</time> {{ post.title }}
-  </h3>
-  {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-  <a href="{{ post.url }}" class="anchor"><small>...Read on.</small></a>
-{% endfor %}
-
-<br/><br/>
-<h2>Recent Posts</h2>
-{% for post in site.posts offset:1 limit:2 %}
-  <small>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="pretty-date">{{ post.date | date_to_string }}</time>
-    <a href="{{ post.url }}" class="anchor">&raquo; {{ post.title }}</a><br/>
-  </small>
-{% endfor %}
+ <div class="text-center">
+  <img class="circular" src="{{site.baseurl}}/images/local/orig1.jpg" >
+  <p>contact me <a href="mailto:rajivrnair@gmail.com">rajivrnair (at) gmail.com</a></p>
+</div>

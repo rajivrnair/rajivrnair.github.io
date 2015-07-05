@@ -1,14 +1,13 @@
 ---
-layout: post
 title: Hibernate Custom UUID generator
-description: Use a custom uuid generator in Hibernate.
-comments: true
+tags: [java, hibernate]
 ---
 
+###Use a custom uuid generator in Hibernate.
 Many web applications these days use UUIDs as primary keys in their database. While this approach has its pros and cons (see [Primary Keys vs GUIDs](http://blog.codinghorror.com/primary-keys-ids-versus-guids/)), one of the principal advantages is that you can generate these ids outside of the database.
 
 ###Contrived Example
-_*System Alpha*_ sends messages to _*System Beta*_ which results in an entity being created in system _*Gamma*_. _*Alpha*_ later needs to query _*System Gamma*_ for that entity.
+_*System Alpha*_ sends messages to _*System Beta*_ which results in an entity being created in _*System Gamma*_. _*Alpha*_ later needs to query _*Gamma*_ for that entity.
 
 - One (horribly-inefficient) way to do this would be for _*Alpha*_ to wait for _*Beta*_ which waits for _*Gamma*_ to come back with an ID that is then passed up. You probably wouldn't print this code and stick it on the refrigerator :-)
 - A better way to do this would be for _*Alpha*_ to generate a UUID and pass that along to _*Beta*_ which uses that UUID in its interaction with _*Gamma*_. _*Gamma*_ would create that entity with the given UUID and _*Alpha*_ could query _*Gamma*_ at leisure.
