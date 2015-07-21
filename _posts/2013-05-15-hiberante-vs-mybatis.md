@@ -9,7 +9,7 @@ I’ve often heard people arguing about whether Hibernate is better or MyBatis. 
 _*Disclaimer: This is my personal (and humble) opinion. Some databases were irremediably harmed in the forming of these views.*_
 
 ##MyBatis
-It is primarily data mapper with a database-centric view of things. You map result sets to objects without giving a rat’s rear-end about whether that data came from single/multiple tables, stored procs etc.
+It is primarily a data mapper with a database-centric view of things. You map result sets to objects without giving a rat’s rear-end about whether that data came from single/multiple tables, stored procs etc.
 
 ###Pros:
 + simplicity and faster development

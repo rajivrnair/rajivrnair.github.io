@@ -52,8 +52,8 @@ Now the *can\_run\_faster\_than\_10\_kph?.call(milkha_singh)* checks if Milkha S
 ###TL;DR;
 **To put it simply, a closure is a lambda paired with the environment in which it was created, which then closes over the lambda.**
 
-###Excellent Reads:
-[Martin Fowler on Lambdas](http://martinfowler.com/bliki/Lambda.html)
-[StackOverflow](http://stackoverflow.com/questions/220658/what-is-the-difference-between-a-closure-and-a-lambda)
-[The Java Lambda FAQ](http://www.lambdafaq.org/)
-[Closures in Ruby](https://innig.net/software/ruby/closures-in-ruby)
+###Some excellent reads on the subject:
+- [Martin Fowler on Lambdas](http://martinfowler.com/bliki/Lambda.html)
+- [StackOverflow](http://stackoverflow.com/questions/220658/what-is-the-difference-between-a-closure-and-a-lambda)
+- [The Java Lambda FAQ](http://www.lambdafaq.org/)
+- [Closures in Ruby](https://innig.net/software/ruby/closures-in-ruby)
