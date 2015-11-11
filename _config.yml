@@ -1,6 +1,6 @@
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "rajivrnair.github.io" # the base hostname & protocol for your site.
-title: "Blog of Rajiv R Nair"
+title: "A Spoonful of Technology"
 
 
 paginate: 3 #articles per page
