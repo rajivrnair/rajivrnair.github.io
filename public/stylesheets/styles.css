@@ -312,7 +312,7 @@ footer .right{
   margin-bottom: 15px;
 }
 
-.resume p{
+.aboutme p{
   mfont-size: 15px;
   line-height: 24px;
   margin: 0 0 10px;
@@ -351,6 +351,6 @@ footer .right{
   /*margin-left: 10px;*/
 }
 
-#title #sitename,.resume span,.resume h2 {
+#title #sitename,.aboutme span,.aboutme h2 {
   color: #EC4E3B;
 }
