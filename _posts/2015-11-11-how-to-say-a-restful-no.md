@@ -1,7 +1,6 @@
 ---
 layout: post
 title: How to say a REST-ful NO?
-comments: true
 tags: [REST, API, http, status, 404, 'resource not found']
 ---
 

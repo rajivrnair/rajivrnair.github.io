@@ -1,6 +1,6 @@
 _site/
 blog.sublime-workspace
-_posts/2016-01-01*
+_posts/2020-*.md
 .sass-cache
 Gemfile.lock
 .DS_Store
