@@ -21,9 +21,12 @@ disqus:
 #     tracking-id: "" #paste your tracking id here
 gems:
   - jekyll-sitemap
+  - jekyll-feed
 
 # This is used by feed.xml. Uncomment if you want to use it.
-# description: "..."
+name: "A Spoonful of Technology"
+description: "Where Rajiv R Nair blogs about technology"
+author: "Rajiv R Nair"
 
 exclude:
   - "README.md"
