@@ -10,7 +10,7 @@ a resource does not exist - a _**200 OK**_ with an empty result, a _**204 NO CON
 A lively discussion resulted in a flurry of ideas and only one near-fatality. We figured it all boiled down
 to what the client is asking for.
 
-####(1) If the client is requesting for a resource, it is either _found (200)_ or _not found (400)_.
+####(1) If the client is requesting for a resource, it is either _found (200)_ or _not found (404)_.
 {% highlight java %}
 GET /dogs/1
 200 OK
