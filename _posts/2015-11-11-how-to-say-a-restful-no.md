@@ -10,6 +10,7 @@ A lively discussion resulted in a flurry of ideas and only one near-fatality. We
 to what the client is asking for.
 
 #### (1) If the client is requesting for a resource, it is either _found (200)_ or _not found (404)_.
+
 ~~~ java
 GET /dogs/1
 200 OK
@@ -23,6 +24,7 @@ GET /dogs/991
 
 #### (2) If the client is searching for a resource and the query is valid, you either get _results (200 with a collection)_ or you get _no results (200 with an empty collection)_.
 Here, the client receives a **200** in both outcomes, implying that the query was valid but nothing matching it was found. This is slightly better than returning a **204** because we might not want to send an empty response body that the client will have to handle differently (think NULL object pattern).
+
 ~~~ java
 GET /dogs?type=annoying
 200 OK
@@ -35,6 +37,7 @@ GET /dogs?fly=true
 ~~~
 
 There's an interesting offshoot to this. What do these (arguably same) requests do?
+
 ~~~ java
 /dogs/991
 404 NOT FOUND
