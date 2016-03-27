@@ -22,6 +22,7 @@ disqus:
 gems:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
 
 # This is used by feed.xml. Uncomment if you want to use it.
 name: "A Spoonful of Technology"
