@@ -8,7 +8,7 @@ tags: [postgres, database]
 
 ~~~ sql
 -- Group by Day of the week
-select count(*) bugs_count,to_char(created_on, 'DAY') as day_of_week from BUGS group by day_of_week order by bugs_count desc;
+>> select count(*) bugs_count,to_char(created_on, 'DAY') as day_of_week from BUGS group by day_of_week order by bugs_count desc;
  bugs_count     | day_of_week
 ----------------+-----------
               8 | THURSDAY
@@ -21,7 +21,7 @@ select count(*) bugs_count,to_char(created_on, 'DAY') as day_of_week from BUGS g
 
 ~~~ sql
 -- Group by Day of the month
-select count(*) as bugs_count,to_char(created_on, 'DD') as day_of_month from BUGS group by day_of_month order by bugs_count desc;
+>> select count(*) as bugs_count,to_char(created_on, 'DD') as day_of_month from BUGS group by day_of_month order by bugs_count desc;
  bugs_count     | day_of_month
 ----------------+--------------
               5 | 16
@@ -41,7 +41,7 @@ select count(*) as bugs_count,to_char(created_on, 'DD') as day_of_month from BUG
 
 ~~~ sql
 -- Group by week
-select count(*) as bugs_count,to_char(created_on, 'YYYY-WW') as year_week from BUGS group by year_week order by year_week;
+>> select count(*) as bugs_count,to_char(created_on, 'YYYY-WW') as year_week from BUGS group by year_week order by year_week;
  bugs_count     | year_week
 ----------------+-----------
               3 | 2015-29
@@ -57,7 +57,7 @@ select count(*) as bugs_count,to_char(created_on, 'YYYY-WW') as year_week from B
 
 ~~~ sql
 -- group by month+year
-select count(*) as bugs_count,to_char(created_on, 'YYYY-MM') as year_month from BUGS group by year_month order by year_month;
+>> select count(*) as bugs_count,to_char(created_on, 'YYYY-MM') as year_month from BUGS group by year_month order by year_month;
  bugs_count     | year_month
 ----------------+------------
               3 | 2015-07
@@ -71,7 +71,7 @@ select count(*) as bugs_count,to_char(created_on, 'YYYY-MM') as year_month from 
 
 ~~~ sql
 -- group by year
-select count(*) as bugs_count,to_char(created_on, 'YYYY') as year from BUGS group by year order by year;
+>> select count(*) as bugs_count,to_char(created_on, 'YYYY') as year from BUGS group by year order by year;
  bugs_count     | year
 ----------------+------
              11 | 2015
