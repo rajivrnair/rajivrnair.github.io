@@ -13,7 +13,7 @@ Many web applications these days use UUIDs as primary keys in their database. Wh
 - A better way to do this would be for *Alpha* to generate a UUID and pass that along to *Beta* which uses that UUID in its interaction with *Gamma*. *Gamma* would create that entity with the given UUID and *Alpha* could query *Gamma* at leisure.
 
 ### So What?
-Well, assume you have the following in *Gamma* to create an entity (Gist [here](https://gist.github.com/rajivrnair/2f660011d821002ecc4c)):
+Well, assume you have the following in *Gamma* to create an entity (Gist [here](https://gist.github.com/rajivrnair/2f660011d821002ecc4c))
 ~~~ java
 @Id
 @Column(name = "entity_id")
@@ -22,7 +22,7 @@ Well, assume you have the following in *Gamma* to create an entity (Gist [here](
 private String entityId;
 ~~~
 
-This will generate a UUID for an entity when it is created. The fly in the ointment is getting hibernate to use the uuid passed in, whenever there is one or fall back to the default behaviour of generating one if the UUID not passed in. You can do this by creating a custom id generator in Hibernate like so:
+This will generate a UUID for an entity when it is created. The fly in the ointment is getting hibernate to use the uuid passed in, whenever there is one or fall back to the default behaviour of generating one if the UUID not passed in. You can do this by creating a custom id generator in Hibernate like so
 ~~~ java
 /**
  * Based on http://stackoverflow.com/a/5392349/566434
@@ -52,7 +52,7 @@ public class InquisitiveUUIDGenerator extends UUIDGenerator {
 }
 ~~~
 
-As you can see, this uses the UUID passed in or generates one if the id is absent. The original entity class too needs to change like so:
+As you can see, this uses the UUID passed in or generates one if the id is absent. The original entity class too needs to change like so \:
 ~~~ java
 @Id
 @Column(name = "entity_id")
