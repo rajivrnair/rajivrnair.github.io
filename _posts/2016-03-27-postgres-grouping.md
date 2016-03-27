@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Postgres - Grouping data by date
 tags: [postgres, database]
 ---
