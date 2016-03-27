@@ -10,7 +10,7 @@ title: "blog"
   {% include post-header-home.html %}
 </div>
 <div class="post-excerpt-home">
-  {{ post.excerpt }}
+  {{ post.excerpt | markdownify }}
   <p class="text-left"><a href="{{ post.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
 </div>
 {% endfor %}
