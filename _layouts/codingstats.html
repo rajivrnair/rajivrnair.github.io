@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ " /public/stylesheets/bs.css " | prepend:site.baseurl }}">
+  <!--<link rel="stylesheet" href="{{" /public/stylesheets/styles.css " | prepend:site.baseurl }}">-->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="{{ " /favicon.ico " | prepend:site.baseurl }}" />
@@ -32,56 +34,37 @@
     var barChart = c3.generate({
       bindto: d3.select('.barChart'),
       data: {
-        columns: [
-          ['Java', 60],
-          ['Bash', 5],
-          ['Javascript', 25],
-          ['Ruby', 10],
+        x: 'x',
+        columns: [],
+        groups: [
+          ['hours']
         ],
         type: 'bar',
-      },
-      bar: {
-        width: {
-          ratio: 0.5 // this makes bar width 50% of length between ticks
+        types: {
+          average: 'line',
         }
       },
       axis: {
-        rotated: true
-      },
-      title: {
-        text: 'Languages/Tools used this week',
-        color: '#EC4E3B'
-      },
-      zoom: {
-        enabled: false
-      }
-    });
-
-    var areaChart = c3.generate({
-      bindto: d3.select('.areaChart'),
-      data: {
-        columns: [
-          ['week', 3, 6, 4, 2, 5, 8],
-        ],
-        types: {
-          week: 'area-spline'
+        x: {
+          type: 'category' // this needed to load string x value
         }
       },
-      title: {
-        text: 'Time spent coding per-day last week'
+    });
+
+    var pieChart = c3.generate({
+      bindto: d3.select('.pieChart'),
+      data: {
+        // iris data from R
+        columns: [],
+        type: 'pie'
       },
     });
 
     var gaugeChart = c3.generate({
       bindto: d3.select('.gaugeChart'),
       data: {
-        columns: [
-          ['hours', 4.7]
-        ],
+        columns: [],
         type: 'gauge',
-      },
-      title: {
-        text: 'Percentage of weekly target(20 hours)'
       },
       gauge: {
         label: {
@@ -105,6 +88,64 @@
         height: 180
       }
     });
+
+    $.ajax({
+      type: 'GET',
+      url: 'https://wakatime.com/share/@rajivrnair/c02918f6-3aa9-421e-9272-a3a2073bde4a.json',
+      dataType: 'jsonp',
+      success: function (response) {
+        var activity = response.data;
+
+        var hoursCoded = [];
+        var days = [];
+        var totalHours = 0;
+
+        activity.forEach(function (element) {
+          days.push(element.range.text.split(' ')[0]);
+          var hours = roundToTwoDecimalPlaces(element.grand_total.total_seconds / 3600);
+          hoursCoded.push(hours);
+          totalHours += hours;
+        }, this);
+
+        var averageHours = roundToTwoDecimalPlaces(totalHours / 7);
+
+        barChart.load({
+          columns: [
+            ['x'].concat(days),
+            ['hours'].concat(hoursCoded),
+            ['average'].concat(Array(7).fill(averageHours))
+          ],
+        });
+
+        gaugeChart.load({
+          columns: [['Hours Coded This Week', roundToTwoDecimalPlaces(totalHours)]],
+        });
+      },
+    });
+
+    $.ajax({
+      type: 'GET',
+      url: 'https://wakatime.com/share/@rajivrnair/fc770307-56b4-4b8e-a650-4b557f7ac248.json',
+      dataType: 'jsonp',
+      success: function (response) {
+        var usage = response.data;
+        var languages = [];
+
+        usage.forEach(function (element) {
+          var temp = [];
+          temp.push(element.name, element.percent);
+          languages.push(temp);
+        }, this);
+
+        pieChart.load({
+          columns: languages,
+        });
+      },
+    });
+
+    var roundToTwoDecimalPlaces = function (number) {
+      return Math.round(number * 100) / 100;
+    };
   </script>
   {% include scripts.html %}
 </body>

@@ -13,17 +13,7 @@
   @extend .table-bordered;
 }
 
-.barChart {
-  width: 50%;
-  min-height: 400px;
-}
-
-.areaChart {
-  width: 50%;
-  min-height: 400px;
-}
-
-.gaugeChart {
-  width: 50%;
+.barChart .pieChart .gaugeChart {
+  width: 100%;
   min-height: 400px;
 }
