@@ -12,3 +12,18 @@
   @extend .table;
   @extend .table-bordered;
 }
+
+.barChart {
+  width: 50%;
+  min-height: 400px;
+}
+
+.areaChart {
+  width: 50%;
+  min-height: 400px;
+}
+
+.gaugeChart {
+  width: 50%;
+  min-height: 400px;
+}
