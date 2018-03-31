@@ -4,3 +4,4 @@ _posts/2020-*.md
 .sass-cache
 Gemfile.lock
 .DS_Store
+.vscode/
