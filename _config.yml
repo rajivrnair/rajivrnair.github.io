@@ -19,7 +19,7 @@ disqus:
 #google analytics
 # google:
 #     tracking-id: "" #paste your tracking id here
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
