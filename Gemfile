@@ -6,3 +6,4 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 gem 'github-pages'
 gem 'jekyll-feed'
+gem 'jekyll-last-modified-at'
