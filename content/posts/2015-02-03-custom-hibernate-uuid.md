@@ -4,7 +4,6 @@ description: "Use a custom uuid generator in Hibernate"
 date: 2015-02-03
 draft: false
 toc: false
-images:
 tags:
   - java
   - hibernate

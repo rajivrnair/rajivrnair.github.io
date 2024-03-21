@@ -4,7 +4,6 @@ description: Sorting a map by values
 date: 2013-02-14
 draft: false
 toc: false
-images:
 tags:
   - java
 ---

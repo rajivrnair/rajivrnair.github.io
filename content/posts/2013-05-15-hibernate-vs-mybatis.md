@@ -4,7 +4,6 @@ description: "Comparison of MyBatis versus Hibernate"
 date: 2013-05-15
 draft: false
 toc: false
-images:
 tags:
   - java
   - ORM

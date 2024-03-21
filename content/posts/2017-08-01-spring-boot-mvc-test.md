@@ -4,7 +4,6 @@ description: Testing APIs in Spring Boot/MVC
 date: 2017-08-01
 draft: false
 toc: false
-images:
 tags:
   - testing
   - spring boot

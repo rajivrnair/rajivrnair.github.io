@@ -4,7 +4,6 @@ description: A simple guide to handling production incidents
 date: 2023-12-07T18:44:57+05:30
 draft: false
 toc: false
-images:
 tags:
   - production,support
 ---

@@ -4,7 +4,6 @@ description: A rant about the Lokpal bill
 date: 2011-08-26
 draft: false
 toc: false
-images:
 tags:
   - rant
   - politics

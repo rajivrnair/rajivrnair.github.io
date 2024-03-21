@@ -4,7 +4,6 @@ description: "What's the difference between a lambda and a closure?"
 date: 2015-05-28
 draft: false
 toc: false
-images:
 tags:
   - functional programming
 ---

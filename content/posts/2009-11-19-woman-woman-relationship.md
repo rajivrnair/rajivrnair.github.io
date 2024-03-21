@@ -4,7 +4,6 @@ description: It ain't always pretty...
 date: 2009-11-19
 draft: false
 toc: false
-images:
 tags:
   - life
   - bullet

@@ -4,7 +4,6 @@ description: Useful postgres snippets for grouping data by date
 date: 2016-03-27
 draft: false
 toc: false
-images:
 tags:
   - postgres
 ---

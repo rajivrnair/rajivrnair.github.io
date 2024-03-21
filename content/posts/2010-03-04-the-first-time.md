@@ -4,7 +4,6 @@ description: The first time it happened to me...
 date: 2010-03-04
 draft: false
 toc: false
-images:
 tags:
   - life
   - bullet

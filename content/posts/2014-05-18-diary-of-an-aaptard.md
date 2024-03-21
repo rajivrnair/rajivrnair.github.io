@@ -4,7 +4,6 @@ description: "The perils of caring too much about politics"
 date: 2014-05-18
 draft: false
 toc: false
-images:
 tags:
   - rant
   - politics

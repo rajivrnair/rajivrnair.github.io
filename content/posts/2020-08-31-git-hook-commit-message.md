@@ -4,7 +4,6 @@ description: Setting up Simple git hook to enforce a commit message
 date: 2020-08-31
 draft: false
 toc: false
-images:
 tags:
   - git
 ---

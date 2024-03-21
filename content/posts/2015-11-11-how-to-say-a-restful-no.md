@@ -4,7 +4,6 @@ description: "Handling negative responses in a REST API"
 date: 2015-11-11
 draft: false
 toc: false
-images:
 tags:
   - REST
   - API
