@@ -1,0 +1,86 @@
+baseurl      = "localhost"
+title        = "My Blog"
+languageCode = "en-us"
+theme        = "hello-4s3ti"
+paginate     = 10
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = """
+  Ah, fill the cup... what boots it to repeat
+  How Time is slipping underneath our Feet
+  Unborn tomorrow, and dead yesterday
+  Why fret about them if TO-DAY be sweet!"""
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+
+  # Metadata mostly used in document's head
+  description = "A Spoonful of Technology"
+  keywords = "homepage, blog"
+  images = [""]
+  
+  custom_css_bs = ["css/bs.css"]
+  custom_css_styles = ["css/styles.css"]
+  custom_css_pygment_trac = ["css/pygment_trac.css"]
+  custom_js_jquery = ["js/jquery.min.js"]
+  custom_js_bootstrap = ["js/bootstrap.min.js"]
+
+  backgroundImage = "/images/bg5.png"
+  backgroundEffects = true
+  showPosts = true
+  ReadmoreText = false
+  hideReadMore = true
+  ShowReadingTime = true
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "A Spoonful of Technology"
+    
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+    [languages.en.params]
+      subtitle = "Rajiv R. Nair"
+      keywords = ""
+      readOtherPosts = "Read more"
+
+    [languages.en.params.logo]
+      logoText = "A Spoonful of Technology"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [menu]
+  [[menu.main]]
+    name = 'Older Posts'
+    pageRef = '/posts'
+    weight = 10
+  [[menu.main]]
+    name = 'About'
+    pageRef = '/about/index.html'
+    weight = 20
+  [[menu.main]]
+    name = 'Resume'
+    pageRef = '/resume'
+    weight = 30
+  [[menu.main]]
+    name = 'Stats'
+    pageRef = '/stats'
+    weight = 40
+  

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w2.org/1999/xhtml">
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.114.1">
+            <meta charset="utf-8" />
+    <title>A Spoonful of Technology </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Spoonful of Technology">
+    <meta property="og:title" content="A Spoonful of Technology" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="localhost" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href=""/>
+    <link rel="canonical" href="localhost/" />    <link rel="apple-touch-icon" sizes="180x180" href="/localhost/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/localhost/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/localhost/favicon-16x16.png">
+    <link rel="manifest" href="/localhost/site.webmanifest">
+    <link rel="mask-icon" href="/localhost/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/localhost/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.33.2/js/jquery.terminal.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/autocomplete_menu.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.33.2/css/jquery.terminal.min.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+    
+    </head>
+        <body>
+        
+<script> 
+jQuery(document).ready(function($) {
+    var animation = false;
+    var availableCommands = ['all', 'whois', 'social', 'work', 'education','skills','projects','print-resume','source', 'exit' ];
+
+    $('body').terminal(function(command, term) {
+
+    function whois() {
+        term.echo("\n[[b;white;]Name:]        Rajiv R. Nair");
+        term.echo("[[b;white;]Profession:]  Code Monkey");
+        term.echo("[[b;white;]Location:]    India");
+        term.echo("[[b;white;]Twitter:]     @gundsawada");
+        term.echo("[[b;cyan;]Home:]        https://rajivrnair.dev");
+        term.echo("[[b;white;]Description:] I'm a programmer who loves cats, coffee and anything with dangerously high levels of saturated fats. If you have worked with me before, well, insanity is my only defence :)");
+      }
+
+    function social() {
+        term.echo("\n[[b;cyan;]Github:]       https://github.com/rajivrnair");
+        term.echo("[[b;cyan;]Twitter:]      https://twitter.com/gundsawada");
+        term.echo("[[b;cyan;]GoodReads:]    https://www.goodreads.com/review/list/939736-rajiv-nair?shelf=currently-reading\n");
+    }
+	    
+    function work() {
+        term.echo("\n[[b;white;]Consulting CTO]");
+        term.echo("[[b;white;]Ampcus Tech Private Limited]");
+        term.echo("Bangalore");
+        term.echo("2022-");
+        term.echo("\nBuilding Acquaa - a next-gen platform designed to drive efficiency & scale in water distribution.");
+        term.echo("\n--------------------\n");
+
+        term.echo("\n[[b;white;]Principal Engineer]");
+        term.echo("[[b;white;]Socash Pte Ltd]");
+        term.echo("Bangalore/Singapore");
+        term.echo("2017-2022");
+        term.echo("\nPlatform that combines the power of the shared economy and digital payments to make cash circulation very efficient.\nThe goal was to convert every shop and individual into a virtual cash distribution network. The technology makes cash social and peer to peer.");
+        term.echo("\n--------------------\n");
+
+        term.echo("\n[[b;white;]Engineering Manager]");
+        term.echo("[[b;white;]Aconex]");
+        term.echo("Bangalore/Melbourne");
+        term.echo("2013-2017");
+        term.echo("\nCloud-based checklist and punch list app to capture, distribute and track defects and other issues in real time - faster and \nmore accurately than traditional systems used on large-scale construction and engineering projects.");
+        term.echo("\n--------------------\n");
+
+        term.echo("\n[[b;white;]Technical Lead]");
+        term.echo("[[b;white;]Ness Technologies]");
+        term.echo("Bangalore/Seattle");
+        term.echo("2010-2013");
+        term.echo("\nLarge-scale content delivery platform for Internet websites specifically tailored for North American Automobile dealerships.");
+        term.echo("\n--------------------\n");
+
+        term.echo("\n[[b;white;]Senior Associate (Trading & Risk)]");
+        term.echo("[[b;white;]Sapient]");
+        term.echo("New Delhi/London");
+        term.echo("2004-2010");
+        term.echo("\nTrading platform for structured equity-based derivatives, securitisation and reconciliation systems.");
+        term.echo("\n--------------------\n");
+    }
+
+    function education() {
+        term.echo("\n[[b;orange;]Bachelor of Information Technology]");
+        term.echo("[[b;white;]University of Delhi]");
+        term.echo("[[b;green;]2000-2004]");
+        term.echo("\n--------------------\n");
+
+    }
+
+    function skills() {
+        term.echo("\n[[b;white;]Major or most recent skills");
+        term.echo("\n[[;white;]Languages/Scripting:]  Java, Kotlin, Android Native, Python, Ruby, SQL, JS.");
+        term.echo("[[;white;]Databases:]            Postgres, MySQL, Oracle.");
+        term.echo("[[;white;]Cloud:]                AWS, some experience with GCP and DO.\n");
+        
+    }
+    
+    function projects() {
+        term.echo("\n[[b;white;]Personal Projects"); // which projects?
+        term.echo("\n[[;white;]");
+        term.echo("[[b;white;]Name:]            DirectVote");
+        term.echo("[[b;white;]Description:]     Completely anonymous eVoting platform built on AWS.");
+        term.echo("[[b;cyan;]Link:]            https://github.com/bitcode-brews");
+        term.echo("\n--------------------\n");
+        
+    }
+
+    function misc(){
+        term.echo ("")
+        term.echo("[[b;;]]" + "\n")
+        term.echo ("[[;;]]")
+        term.echo ("")
+    }
+
+    function help () {
+        term.echo("\n[[b;white;]Available commands:]" +
+                  "\n[[;orange;]-> " + availableCommands.join('\n-> ')+ "]\n")
+    }
+
+      function source() {
+          term.echo("        _______            \n"+
+                    "       |       |           \n"+
+                    "       |       |           \n"+
+                    "       |_______|_______    \n"+
+	                "               |       |   \n"+
+                    "               |       |   \n"+
+                    " ______________|_______|   \n"+
+                    "|      |       |       |   \n"+
+                    "|      |       |       |   \n"+
+                    "|______|_______|_______|   \n"+
+                    "[[;red;]May the source be with you]\n"+
+                    "[[;green;]https://github.com/4s3ti/terminalcv\n");
+      }
+
+    
+    function progress(percent, width) {
+        var size = Math.round(width*percent/100);
+        var left = '', taken = '', i;
+        for (i=size; i--;) {
+            taken += '=';
+        }
+        if (taken.length > 0) {
+            taken = taken.replace(/=$/, '>');
+        }
+        for (i=width-size; i--;) {
+            left += ' ';
+        }
+        return '[' + taken + left + '] ' + percent + '%';
+    }
+
+    function loading () {
+        var i = 0, size = 30;
+        prompt = term.get_prompt();
+        string = progress(0, size);
+        term.set_prompt(progress);
+        animation = true;
+        (function loop() {
+            string = progress(i++, size);
+            term.set_prompt(string);
+            if (i < 100) {
+                timer = setTimeout(loop, 10);
+            } else {
+                term.echo(progress(i, size) + ' [[b;green;]OK]').set_prompt(prompt);
+                animation = false
+            }
+        })();
+    }
+
+       
+        commands = command.split(/[ ]+/);
+        switch(commands[0]) {
+            case 'whois':
+                whois();
+                break;
+            case 'social':
+                social();
+                break;
+            case 'work':
+                work();
+                break;
+            case 'education':
+                education();
+                break;
+            case 'skills':
+                skills();
+                break;
+            case 'projects':
+                projects();
+                break;
+            case 'misc':
+                misc();
+                break;
+            case 'help':
+                help();
+                break;
+            case 'exit':
+            term.echo("[[;orange;]terminating ... ]")
+                loading();
+                setTimeout(function(){window.location = '/'}, 2000);
+                break;
+            case 'print-resume':
+            term.echo("[[;orange;]cranking up the PDF machine ... ]")
+                loading();
+                setTimeout(function(){window.location = '/resume/'}, 2000);
+                break;
+            case 'all':
+                whois();
+                social();
+                work();
+                education();
+                skills();
+                projects();
+                source();
+                
+                break;
+            
+            case ':(){:|:&};:':
+            case 'source':
+                source();
+                break;
+            
+            default:
+                term.echo("\n[[b;red;]unknown command: " + command + "\n]" +
+                          "Please type 'help' for a list of available commands\n");
+        }
+    }, {
+        prompt: '[[b;green;]][[b;green;]$>]' + " ",
+        greetings: "[[b;white;]Hi! I'm Rajiv 👋]\n\nI have been working for over nineteen years across the finance, construction, automobile and telecom domains and have played diverse business and technical roles \nranging from hands-on development to helping our clients elucidate new requirements, building proof-of-concept pieces and analyse their impact on existing applications. \nI have also been responsible for design, infrastructure and performance on my projects.\n\n[[b;white;]Welcome to my online resume. Type 'help' for a list of available commands]\n",
+        keydown: function(e, term) {
+            if (animation) {
+                if (e.which == 68 && e.ctrlKey) { 
+                    clearTimeout(timer);
+                    animation = false;
+                    term.echo(string + ' [[b;red;]FAIL]')
+                    .set_prompt(prompt);
+                }
+                return false;
+            }
+        },
+        autocompleteMenu: true,
+        completion: availableCommands
+        
+    });
+});
+</script>
+
+        </body>
+</html>

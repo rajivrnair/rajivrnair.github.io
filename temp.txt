@@ -1,0 +1,9 @@
+https://4s3ti.net/
+https://github.com/4s3ti/hugo-theme-hello-4s3ti
+https://4s3ti.net/en/posts/vpnusage/
+https://github.com/4s3ti/terminalcv
+https://4s3ti.net/en/posts/terminalcv/
+https://themes.gohugo.io/themes/hugo-theme-hello-4s3ti
+https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
+https://github.com/victoriadrake/victoriadrake.github.io/blob/master/.github/workflows/deploy-site.yml

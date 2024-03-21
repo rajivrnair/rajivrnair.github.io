@@ -1,0 +1,32 @@
+- About
+  X basic setup
+  X fill in details
+  X clean up colours
+  X exit
+- Resume
+  - fill in details (https://www.techinterviewhandbook.org/resume/)
+  X pdf download
+  X home button
+  X link to hosted resume
+X stats
+  X add stats page
+  X add graphs from Wakatime
+X no social icons
+X no disqus
+- Dark/Light mode toggle
+  - https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/
+- Search index
+  - https://victoria.dev/blog/add-search-to-hugo-static-sites-with-lunr/
+  - https://fajarwz.com/blog/create-search-feature-for-hugo-static-site-with-lunr/
+  - https://blog.jeremylikness.com/blog/dynamic-search-in-a-static-hugo-website/
+
+
+
+hugo server -D
+hugo new about.md
+hugo version
+hugo --buildDrafts
+hugo new posts/2009-05-11-got-a-bull.md
+
+
+Highly detailed shot of a man walking towards a spaceship on a fantasy planet with three moons, his back to the camera, ultra realistic cyberpunk, sci-fi, fantasy, 8K, oft light, volumetric lighting, night, fog, intricate, elegant
