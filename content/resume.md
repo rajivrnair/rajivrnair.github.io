@@ -1,7 +1,7 @@
 ---
 title: "Resume"
 date: 2023-10-11T20:11:32+05:30
-draft: true
+draft: false
 layout: resume
 ---
 

@@ -2,7 +2,7 @@
 title: Setting up a journal in less than one hour using vim
 description: Setting up a DIY journal
 date: 2018-04-01
-draft: true
+draft: false
 toc: false
 images:
 tags:

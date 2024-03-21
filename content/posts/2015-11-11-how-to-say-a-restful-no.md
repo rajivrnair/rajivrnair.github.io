@@ -2,7 +2,7 @@
 title: How to say a REST-ful NO?
 description: "Handling negative responses in a REST API"
 date: 2015-11-11
-draft: true
+draft: false
 toc: false
 images:
 tags:

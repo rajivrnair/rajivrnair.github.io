@@ -2,7 +2,7 @@
 title: Hibernate Custom UUID generator
 description: "Use a custom uuid generator in Hibernate"
 date: 2015-02-03
-draft: true
+draft: false
 toc: false
 images:
 tags:

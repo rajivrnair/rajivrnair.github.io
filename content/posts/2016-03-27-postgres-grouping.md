@@ -2,7 +2,7 @@
 title: Postgres - Grouping data by date
 description: Useful postgres snippets for grouping data by date
 date: 2016-03-27
-draft: true
+draft: false
 toc: false
 images:
 tags:

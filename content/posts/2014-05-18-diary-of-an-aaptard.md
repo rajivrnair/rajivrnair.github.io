@@ -2,7 +2,7 @@
 title: The Diary of an AAPtard
 description: "The perils of caring too much about politics"
 date: 2014-05-18
-draft: true
+draft: false
 toc: false
 images:
 tags:

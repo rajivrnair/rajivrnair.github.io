@@ -2,7 +2,7 @@
 title: Testing the Form Post in Spring Boot/MVC
 description: Testing APIs in Spring Boot/MVC
 date: 2017-08-01
-draft: true
+draft: false
 toc: false
 images:
 tags:

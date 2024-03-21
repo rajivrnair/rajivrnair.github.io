@@ -2,7 +2,7 @@
 title: What's with the Lokpal?
 description: A rant about the Lokpal bill
 date: 2011-08-26
-draft: true
+draft: false
 toc: false
 images:
 tags:

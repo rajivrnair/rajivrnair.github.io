@@ -2,7 +2,7 @@
 title: On a Woman-Woman Relationship
 description: It ain't always pretty...
 date: 2009-11-19
-draft: true
+draft: false
 toc: false
 images:
 tags:
