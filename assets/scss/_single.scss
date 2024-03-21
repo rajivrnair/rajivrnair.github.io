@@ -10,22 +10,22 @@
 
   &-listing {
     padding: 10px;
-    text-align: center;
+    text-align: left;
     a {
       text-decoration: none;
     }
   }
 
   &-content-listing {
-    text-align: center;
+    text-align: left;
   }
   
   &-tags-listing {
-    text-align: center;
+    text-align: left;
   }
 
   &-title-listing {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
     margin: 5px auto;
     @media #{$media-size-phone} {
@@ -267,7 +267,7 @@
   opacity: 0.8;
   width: 100%;
   max-width: 1200px;
-  text-align: center;
+  text-align: left;
   padding: 5px;
   margin: 10px auto;
   @media #{$media-size-tablet} {
