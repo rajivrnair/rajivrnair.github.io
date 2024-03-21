@@ -25,7 +25,7 @@ paginate     = 10
 
   # Metadata mostly used in document's head
   description = "A Spoonful of Technology"
-  keywords = "homepage, blog"
+  keywords = "homepage, blog, rajivrnair"
   images = [""]
   
   custom_css_bs = ["css/bs.css"]
