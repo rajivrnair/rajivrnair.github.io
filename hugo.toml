@@ -25,6 +25,7 @@ paginate     = 10
 
   # Metadata mostly used in document's head
   description = "A Spoonful of Technology"
+  extendedDescription = "A blog about things that interest me and a space to rant. My personal pensieve, if you will."
   keywords = "homepage, blog, rajivrnair"
   images = [""]
   
@@ -40,6 +41,24 @@ paginate     = 10
   ReadmoreText = false
   hideReadMore = true
   ShowReadingTime = true
+
+  [params.footer]
+    trademark = true
+    rss = false
+    copyright = true
+    author = true
+
+    copyrightText = "All rights reserved."
+    topText = [
+      "Live long and prosper 🖖🏼",
+    ]
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "<i>Hello 4s3ti</i> and <i>terminalcv</i> themes by <a href=\"https://github.com/4s3ti\">4s3ti</a>"
+    ]
+  [params.author]
+    name = "Rajiv R. Nair"
+    page = "https://github.com/rajivrnair"
 
 [taxonomies]
     category = "blog"
@@ -59,6 +78,7 @@ paginate     = 10
 
     [languages.en.params.logo]
       logoText = "A Spoonful of Technology"
+      logoMark = ">"
       logoHomeLink = "/"
     # or
     #
